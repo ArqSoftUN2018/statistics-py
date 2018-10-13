@@ -16,10 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
+from rest_framework_swagger.views import get_swagger_view
+
+schema_view = get_swagger_view(title='Statistics API')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^', include('reportes.urls')),
     url(r'^', include('tareas.urls')),
     url(r'^', include('estadisticas.urls')),
+    url(r'^$', schema_view),
 ]
