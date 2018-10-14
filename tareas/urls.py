@@ -4,7 +4,7 @@ from tareas import views
 
 urlpatterns = [
     url(r'^tareas/$', views.tarea_list),
-    url(r'^tereas/(?P<pk>[0-9]+)/$', views.tarea_detail),
+    url(r'^tareas/(?P<pk>[0-9]+)/$', views.tarea_detail),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)
