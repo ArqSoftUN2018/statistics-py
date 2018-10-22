@@ -1,23 +1,16 @@
 version: '2'
-
 services:
-  statistics_db:
-    image: postgres:10.1-alpine
-    volumes:
-      - postgres_data:/var/lib/postgresql/data/
-    ports:
-      - "5432:5432"
-  statistics_ms:
+  web:
     build: .
-    command: python3 manage.py runserver 0.0.0.0:3004
-    expose:
-      - "3004"
-    ports:
-      - "3004:3004"
-    volumes:
-        - .:/code
     links:
-    - statistics_db
+    - db
+    ports:
+    - "3004:3004"
 
-volumes:
-  postgres_data:
+  db:
+    image: postgres
+    ports:
+    - "5432:5432"
+    environment:
+      POSTGRES_USER: "statisticsadmin"
+      POSTGRES_PASSWORD: "arqsoftun"
