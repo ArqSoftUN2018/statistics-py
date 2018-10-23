@@ -7,5 +7,5 @@ WORKDIR /code
 COPY . /code/
 ADD requirements.txt /code/
 RUN pip install -r requirements.txt 
-EXPOSE 3004
-CMD ["python","manage.py","runserver","0.0.0.0:3004"]
+EXPOSE 8000
+CMD ["python","manage.py","runserver","0.0.0.0:8000"]
