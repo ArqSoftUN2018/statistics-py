@@ -88,7 +88,7 @@ DATABASES = {
         'USER': 'statisticsadmin',
         'PASSWORD': 'arqsoftun',
         'HOST': 'statistics-db',
-        'PORT': 5432
+        'PORT': '5432'
     }
 }
 
