@@ -14,10 +14,4 @@ services:
     ports:
       - 3004:8000
     depends_on:
-      - migration
-      - statistics-db
-  migration:
-    image: caatovarbo/statistics-py
-    command: python manage.py migrate --noinput
-    depends_on:
       - statistics-db
