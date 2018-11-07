@@ -85,10 +85,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'statistics',
-        'USER': 'statisticsadmin',
-        'PASSWORD': 'arqsoftun',
-        'HOST': 'statistics-db',
-        'PORT': '5432'
+        'USER': 'statistics',
+        'PASSWORD': 'statistics',
+        'HOST': 'localhost',
+        'PORT': ''
     }
 }
 

@@ -6,8 +6,8 @@ services:
       - 3307:5432
     environment:
       POSTGRES_DB: 'statistics'
-      POSTGRES_USER: 'statisticsadmin'
-      POSTGRES_PASSWORD: 'arqsoftun'
+      POSTGRES_USER: 'statistics'
+      POSTGRES_PASSWORD: 'statistics'
   statistics-ms:
     image: caatovarbo/statistics-py
     command: python manage.py runserver 0.0.0.0:8000
