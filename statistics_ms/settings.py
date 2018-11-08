@@ -87,8 +87,8 @@ DATABASES = {
         'NAME': 'statistics',
         'USER': 'statistics',
         'PASSWORD': 'statistics',
-        'HOST': 'statistics-db',
-        'PORT': '',
+        'HOST': 'db',
+        'PORT': '5432',
     }
 }
 
