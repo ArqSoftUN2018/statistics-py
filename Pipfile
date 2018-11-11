@@ -4,12 +4,12 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-djangorestframework = "*"
+django = "==2.1"
+django-cors-headers = "*"
+django-rest-framework = "*"
 django-rest-swagger = "*"
-"psycopg2" = "*"
-Django = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.6"
+python_version = "3.7"
