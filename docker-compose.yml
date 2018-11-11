@@ -1,16 +1,16 @@
 version: '2'
 
 services:
-  web:
+  statistics-ms:
     build: .
-    command: python /usr/src/app/manage.py runserver 0.0.0.0:8000
+    command: gunicorn statistics_ms.wsgi:application --bind 0.0.0.0:8000
     ports:
-      - 3007:8000
+      - 3008:8000
     environment:
       - SECRET_KEY=statistics
       - POSTGRES_HOST=db
       - POSTGRES_PORT=5432
     depends_on:
-      - db
-  db:
+      - statistics-db
+  statistics-db:
     image: postgres:10.5-alpine
