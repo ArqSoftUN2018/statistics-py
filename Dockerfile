@@ -23,6 +23,7 @@ RUN pipenv install --skip-lock --system --dev
 
 # copy entrypoint.sh
 COPY ./docker-entrypoint.sh /usr/src/app/docker-entrypoint.sh
+RUN ["chmod", "+x", "/usr/src/app/docker-entrypoint.sh"]
 
 # copy project
 COPY . /usr/src/app/
