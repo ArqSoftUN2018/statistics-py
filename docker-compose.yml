@@ -3,7 +3,7 @@ version: '2'
 services:
   statistics-ms:
     build: .
-    command: gunicorn statistics_ms.wsgi:application --bind 0.0.0.0:8000
+    command: ["gunicorn", "statistics_ms.wsgi:application", "--bind", "0.0.0.0:8000"]
     ports:
       - 3007:8000
     environment:
