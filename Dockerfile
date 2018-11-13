@@ -23,7 +23,7 @@ RUN pipenv install --skip-lock --system --dev
 
 # copy entrypoint.sh
 COPY ./entrypoint.sh /usr/src/app/entrypoint.sh
-RUN chmod a+rx /entrypoint.sh
+RUN chmod a+rx entrypoint.sh
 
 # copy project
 COPY . /usr/src/app/
