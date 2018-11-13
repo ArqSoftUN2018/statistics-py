@@ -29,4 +29,4 @@ RUN chmod 777 /usr/src/app/entrypoint.sh
 COPY . /usr/src/app/
 
 # run entrypoint.sh
-CMD ["/usr/src/app/entrypoint.sh"]
+ENTRYPOINT ["sh", "/docker-entrypoint.sh"]
