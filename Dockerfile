@@ -25,4 +25,9 @@ RUN pipenv install --skip-lock --system --dev
 ADD . /usr/src/app/
 
 # run entrypoint.sh
-CMD ["sh","-c","chmod 777 /usr/src/app/entrypoint.sh && /usr/src/app/entrypoint.sh"]
+# set file permissions
+ADD ./entrypoint.sh /tmp/entrypoint.sh
+RUN chmod 777 /tmp/entrypoint.sh
+
+# run server
+CMD ["/tmp/entrypoint.sh"]
