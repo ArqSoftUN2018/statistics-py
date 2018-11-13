@@ -8,8 +8,12 @@ services:
       - 3007:8000
     environment:
       - SECRET_KEY=statistics
-      - POSTGRES_HOST=statistics-db
-      - POSTGRES_PORT=5432
+      - SQL_ENGINE=django.db.backends.postgresql
+      - SQL_DATABASE=postgres
+      - SQL_USER=postgres
+      - SQL_PASSWORD=postgres
+      - SQL_HOST=statistics-db
+      - SQL_PORT=5432
     depends_on:
       - statistics-db
   statistics-db:
