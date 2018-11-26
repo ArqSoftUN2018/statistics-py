@@ -31,3 +31,4 @@ RUN chmod 777 /tmp/entrypoint.sh
 
 # run server
 CMD ["/tmp/entrypoint.sh"]
+EXPOSE 3007
